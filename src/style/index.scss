@@ -17,8 +17,15 @@ body {
   background-color: rgb(25, 29, 10);
 }
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .container {
   max-width: 166rem;
+  width: 100%;
   margin: 0 auto;
   padding: 0 1rem;
 }

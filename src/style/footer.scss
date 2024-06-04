@@ -1,0 +1,50 @@
+@import './variables.scss';
+
+.footer {
+  background: rgb(49, 18, 18);
+  border: 4px solid $c-orange;
+  border-top-left-radius: 8rem;
+  border-top-right-radius: 8rem;
+  border-bottom: none;
+  flex-shrink: 0;
+  position: relative;
+  max-width: 192rem;
+  width: 100%;
+  margin: 0 auto;
+  &_inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  &_gradient {
+    position: absolute;
+    right: -28rem;
+    bottom: 0rem;
+    width: 57.4rem;
+    height: 57.4rem;
+    filter: blur(50rem);
+    background: linear-gradient(225deg, rgb(249, 146, 71), rgb(242, 157, 162) 100%);
+    opacity: 0.7;
+    overflow: hidden;
+  }
+  &_menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+  }
+  &_menu_item {
+    &:not(:last-child) {
+      margin-right: 4rem;
+    }
+  }
+  &_menu_link {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  &_social_list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 23.2rem;
+  }
+}
