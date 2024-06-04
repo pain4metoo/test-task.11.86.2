@@ -15,3 +15,9 @@ html {
 body {
   @extend %font-lexend;
 }
+
+.container {
+  max-width: 166rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
