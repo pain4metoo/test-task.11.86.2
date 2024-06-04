@@ -30,34 +30,6 @@ module.exports = {
       filename: 'index.html',
       chunks: ['main'],
     }),
-    new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'src/tour-pages/', 'tour_0.html'),
-      filename: 'tour_0.html',
-    }),
-    new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'src/tour-pages/', 'tour_1.html'),
-      filename: 'tour_1.html',
-    }),
-    new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'src/tour-pages/', 'tour_2.html'),
-      filename: 'tour_2.html',
-    }),
-    new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'src/tour-pages/', 'tour_3.html'),
-      filename: 'tour_3.html',
-    }),
-    new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'src/tour-pages/', 'tour_4.html'),
-      filename: 'tour_4.html',
-    }),
-    new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'src/tour-pages/', 'tour_5.html'),
-      filename: 'tour_5.html',
-    }),
-    new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'src/tour-pages/', 'tour_6.html'),
-      filename: 'tour_6.html',
-    }),
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',
     }),
