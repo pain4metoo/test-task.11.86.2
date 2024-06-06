@@ -3,8 +3,8 @@
 .footer {
   background: rgb(49, 18, 18);
   border: 4px solid $c-orange;
-  border-top-left-radius: 8rem;
-  border-top-right-radius: 8rem;
+  border-top-left-radius: 6rem;
+  border-top-right-radius: 6rem;
   border-bottom: none;
   flex-shrink: 0;
   position: relative;
@@ -14,37 +14,87 @@
   &_inner {
     display: flex;
     justify-content: space-between;
+    padding-bottom: 1.5rem;
   }
   &_gradient {
     position: absolute;
-    right: -28rem;
+    right: 0rem;
     bottom: 0rem;
     width: 57.4rem;
     height: 57.4rem;
-    filter: blur(50rem);
+    filter: blur(36rem);
     background: linear-gradient(225deg, rgb(249, 146, 71), rgb(242, 157, 162) 100%);
-    opacity: 0.7;
-    overflow: hidden;
+    opacity: 0.6;
+    user-select: none;
+    pointer-events: none;
   }
   &_menu {
     display: flex;
     align-items: center;
     list-style: none;
     padding: 0;
+    margin: 0;
+    padding-top: 7.5rem;
   }
   &_menu_item {
+    &:first-child {
+      margin-left: 0.2rem;
+    }
     &:not(:last-child) {
-      margin-right: 4rem;
+      margin-right: 4.3rem;
     }
   }
   &_menu_link {
     text-decoration: none;
     color: #ffffff;
+    transition: 0.5s ease;
+    &:hover {
+      color: $c-orange;
+    }
+    &:active {
+      color: $c-orange;
+    }
+  }
+  &_menu_link_orange {
+    color: $c-orange;
+    text-decoration: underline;
+    transition: 0.5s ease;
+    &:hover {
+      color: orange;
+    }
+    &:active {
+      color: $c-orange;
+    }
+  }
+  &_social_title {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    text-align: right;
+    color: #ffffff;
+    margin: 0;
+    margin-top: 3.4rem;
+    margin-bottom: 1.6rem;
+    font-weight: 300;
   }
   &_social_list {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 23.2rem;
+    min-width: 23.2rem;
+  }
+  &_social_item {
+    &:hover .footer_social_img {
+      transition: 0.5s ease;
+      filter: invert(61%) sepia(23%) saturate(651%) hue-rotate(220deg) brightness(111%) contrast(90%);
+    }
+    &:active .footer_social_img {
+      transition: 0.5s ease;
+      filter: invert(61%) sepia(23%) saturate(651%) hue-rotate(220deg) brightness(111%) contrast(90%);
+    }
+  }
+  &_social_img {
+    width: 3.2rem;
+    height: 3.2rem;
+    object-fit: cover;
   }
 }

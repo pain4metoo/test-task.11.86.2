@@ -6,4 +6,4 @@ import './style/header.scss';
 import './style/main.scss';
 import './style/footer.scss';
 
-import './js/animation.js';
+import './js/change-lang.js';
