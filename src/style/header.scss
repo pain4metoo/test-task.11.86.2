@@ -8,6 +8,9 @@
   border-radius: 6.4rem;
   border: 4px solid $c-orange;
   background: rgb(25, 29, 10);
+  &_burger {
+    display: none;
+  }
   &_inner {
     display: flex;
     align-items: center;
@@ -59,6 +62,9 @@
       border: 2px solid $c-orange;
     }
   }
+  &_btn_mob {
+    display: none;
+  }
   &_btn_lang {
     width: 7.5rem;
     height: 4.8rem;
@@ -101,6 +107,209 @@
     }
     &:active {
       border: 2px solid rgb(235, 242, 157);
+    }
+  }
+}
+
+@media (max-width: 1580px) {
+  .header {
+    &_inner {
+      margin-left: 0;
+      justify-content: space-around;
+    }
+    &_nav_items {
+      padding: 0;
+    }
+    &_nav_item:not(:last-child) {
+      margin-right: 2rem;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .header {
+    min-height: 5.6rem;
+    border: 0.2rem solid $c-orange;
+    margin-top: 1rem;
+    &_inner {
+      flex-direction: column;
+      transform: translate(-50%, -200%);
+      position: absolute;
+      opacity: 0;
+    }
+    &_btn_mob {
+      display: block;
+      color: #ffffff;
+      padding-top: 1.4rem;
+      width: 3.6rem;
+      height: 3.6rem;
+      padding-left: 3.6rem;
+      background: rgb(25, 29, 10);
+      border-radius: 50%;
+      border: 2px solid rgb(235, 242, 157);
+      text-transform: uppercase;
+      transition: 0.5s ease;
+      cursor: pointer;
+      text-decoration: none;
+      position: absolute;
+      right: 6.2rem;
+      top: 2rem;
+      &_toggle {
+        display: none;
+      }
+      &:hover {
+        border: 2px solid $c-orange;
+      }
+      &:active {
+        border: 2px solid $c-orange;
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        background: url('../assets/svg/lang-logo.svg') no-repeat center / cover;
+        width: 1.87rem;
+        height: 1.87rem;
+        left: 0.9rem;
+        top: 0.6rem;
+      }
+    }
+    &_nav_show {
+      position: fixed;
+      transform: translate(-50%, 15%);
+      opacity: 1;
+      transition: 0.5s ease;
+      left: 51%;
+    }
+    &_nav_items {
+      flex-direction: column;
+      margin: 0;
+    }
+    &_nav_item {
+      min-width: 40rem;
+      text-align: center;
+      border: 2px solid $c-orange;
+      border-radius: 2.8rem;
+      padding: 1.3rem 2rem;
+      margin: 0;
+      margin-bottom: 1rem;
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+    }
+    &_buttons {
+      margin-right: 0rem;
+    }
+    &_burger {
+      display: block;
+      position: absolute;
+      top: 1rem;
+      right: 2rem;
+      padding-top: 2rem;
+      cursor: pointer;
+      width: 3.2rem;
+      transition: 0.2s ease;
+      z-index: 2;
+      transform: none;
+      &_fix {
+        top: 1.8rem;
+      }
+    }
+    &_burger_item {
+      width: 2.1rem;
+      height: 1.4rem;
+      display: block;
+      height: 0.2rem;
+      background-color: beige;
+      margin-bottom: 0.6rem;
+      transition: all 0.5s;
+      transform: none;
+      &_rotate {
+        z-index: 3;
+        &:nth-child(1) {
+          margin-bottom: -2px;
+          transform: rotate(45deg);
+        }
+        &:nth-child(2) {
+          margin-bottom: -2px;
+          transform: rotate(-45deg);
+        }
+        &:nth-child(3) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .header {
+    &_nav_item {
+      min-width: 30rem;
+      width: 100%;
+      text-align: left;
+      height: 5rem;
+    }
+    &_nav_link {
+      font-size: 1.8rem;
+      line-height: 2.4rem;
+      font-weight: 400;
+    }
+    &_burger {
+      padding-top: 0;
+      top: 3.1rem;
+      right: 2rem;
+      &_item {
+        margin-bottom: 0.4rem;
+      }
+      &_fix {
+        top: 3.7rem;
+      }
+    }
+    &_buttons {
+      flex-direction: column;
+      margin-top: 3rem;
+    }
+    &_btn {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 0.5rem;
+      &_log {
+        background-color: rgb(49, 18, 18);
+      }
+    }
+    &_btn_mob {
+      right: 6.2rem;
+      top: 2rem;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .header {
+    &_nav_show {
+      transform: translate(-50%, 14%);
+    }
+    &_nav_item {
+      margin-bottom: 0.5rem;
+      padding: 0;
+      padding-top: 1.2rem;
+      padding-left: 1.5rem;
+    }
+    &_buttons {
+      max-width: 30rem;
+      margin-top: 2.3rem;
+    }
+    &_btn {
+      font-size: 1.6rem;
+      line-height: 2rem;
+      font-weight: 400;
+      &_log {
+        padding-right: 2rem;
+      }
+      &_sign {
+        padding-top: 1rem;
+        padding-right: 2rem;
+      }
     }
   }
 }

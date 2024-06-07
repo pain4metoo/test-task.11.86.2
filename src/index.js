@@ -7,3 +7,4 @@ import './style/main.scss';
 import './style/footer.scss';
 
 import './js/change-lang.js';
+import './js/burger-menu.js';
