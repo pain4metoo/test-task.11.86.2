@@ -9,7 +9,7 @@
   const headerBtnLang = document.querySelector('.header_btn_lang');
 
   const headerNavItems = document.querySelectorAll('.header_nav_item');
-  Array.from(headerNavItems).map((el) => {
+  Array.from(headerNavItems).forEach((el) => {
     el.onclick = () => handleOnClick();
   });
 
@@ -28,6 +28,14 @@
     burgetSticks.forEach((el) => {
       el.classList.toggle('header_burger_item_rotate');
     });
+
+    if (windowInnerWidth > 900) {
+      blackout.classList.remove('bg_active');
+    } else {
+      if (isShowMenu) {
+        blackout.classList.add('bg_active');
+      }
+    }
 
     if (windowInnerWidth <= 420) {
       headerBtnMob.classList.remove('header_btn_mob_toggle');
