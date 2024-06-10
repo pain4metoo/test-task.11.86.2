@@ -43,6 +43,9 @@
     &:not(:last-child) {
       margin-right: 4.3rem;
     }
+    &_add {
+      display: none;
+    }
   }
   &_menu_link {
     text-decoration: none;
@@ -91,10 +94,103 @@
       transition: 0.5s ease;
       filter: invert(61%) sepia(23%) saturate(651%) hue-rotate(220deg) brightness(111%) contrast(90%);
     }
+    &_add {
+      display: none;
+    }
   }
   &_social_img {
     width: 3.2rem;
     height: 3.2rem;
     object-fit: cover;
+  }
+}
+
+@media (max-width: 1580px) {
+  .footer {
+    margin-top: 15.45rem;
+  }
+}
+
+@media (max-width: 720px) {
+  .footer {
+    &_inner {
+      flex-direction: column;
+    }
+    &_menu {
+      padding-top: 5rem;
+    }
+    &_menu_item {
+      &:not(:last-child) {
+        margin-right: 1.5rem;
+      }
+    }
+    &_social_item {
+      margin-right: 0.8rem;
+    }
+    &_social_title {
+      text-align: left;
+    }
+    &_social_list {
+      justify-content: initial;
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .footer {
+    &_menu_link {
+      font-size: 1.4rem;
+      line-height: 2rem;
+    }
+    &_menu {
+      flex-direction: column;
+      align-items: start;
+    }
+    &_menu_item {
+      &:not(:last-child) {
+        margin-right: 0rem;
+        margin-bottom: 1rem;
+      }
+      &_add {
+        display: block;
+      }
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .footer {
+    margin-top: 14.45rem;
+    border: 0.2rem solid $c-orange;
+    border-top-left-radius: 4.7rem;
+    border-top-right-radius: 4.7rem;
+    &_menu {
+      padding-top: 1.5rem;
+      margin-left: 0.7rem;
+    }
+    &_menu_item {
+      &:not(:last-child) {
+        margin-bottom: 0.25rem;
+      }
+    }
+    &_social_title {
+      font-size: 1.4rem;
+      line-height: 2rem;
+      margin-left: 0.7rem;
+      margin-top: 2rem;
+      margin-bottom: 0.9rem;
+    }
+    &_social_list {
+      margin-left: 0.9rem;
+    }
+    &_social_item {
+      &_add {
+        display: block;
+      }
+    }
+    &_social_img {
+      width: 2.7rem;
+      height: 2.7rem;
+    }
   }
 }

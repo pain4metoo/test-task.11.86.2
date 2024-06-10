@@ -136,6 +136,7 @@
       transform: translate(-50%, -200%);
       position: absolute;
       opacity: 0;
+      z-index: $z-header;
     }
     &_btn_mob {
       display: block;
@@ -208,7 +209,7 @@
       cursor: pointer;
       width: 3.2rem;
       transition: 0.2s ease;
-      z-index: 2;
+      z-index: $z-header;
       transform: none;
       &_fix {
         top: 1.8rem;
@@ -224,7 +225,7 @@
       transition: all 0.5s;
       transform: none;
       &_rotate {
-        z-index: 3;
+        z-index: $z-headerRotate;
         &:nth-child(1) {
           margin-bottom: -2px;
           transform: rotate(45deg);

@@ -2,6 +2,12 @@
 $c-orange: #f97247;
 $c-brown: rgb(49, 18, 18);
 
+// z-index
+
+$z-blackout: 3;
+$z-header: 4;
+$z-headerRotate: 5;
+
 %font-lexend {
   font-family: 'Lexend', sans-serif;
   font-size: 1.6rem;
